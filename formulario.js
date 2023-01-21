@@ -19,13 +19,10 @@ formulario.onsubmit = function(e) {
   if (nombre.length === 0) {
     n.classList.add("error")
   }
-  if (edad < 18 || edad > 120) {
+  else if (edad < 18 || edad > 120) {
     e.classList.add("error")
   }
-
-if (nombre.length > 0 
-  && (edad > 18 
-    && edad < 120) ) {
+  else if (nombre.length > 0 || (edad > 18) && (edad < 120) ) {
   agregarInvitado(nombre, edad, nacionalidad)
   }
 }
